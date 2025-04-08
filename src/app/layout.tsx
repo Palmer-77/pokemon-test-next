@@ -18,10 +18,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Smart Durian Control',
-    template: '%s | Smart Durian Control',
+    default: 'Pokemon Test',
+    template: '%s | Pokemon Test',
   },
-  description: 'Smart Durian Control คือระบบ Web CMS ที่ออกแบบมาเพื่อช่วยให้คุณ ตั้มแจ่ม สามารถจัดการสวนทุเรียนได้อย่างมีประสิทธิภาพและง่ายดาย ควบคุมทุกขั้นตอนตั้งแต่การดูแลต้น, การจัดการผลผลิต, การตลาด, ไปจนถึงการวิเคราะห์ข้อมูล เพื่อให้สวนทุเรียนของคุณเติบโตอย่างยั่งยืนและสร้างผลกำไรสูงสุด',
+  description: 'Pokemon Test',
   robots: {
     follow: true,
     index: true,
