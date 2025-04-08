@@ -1,0 +1,183 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './vars.scss';
+@import './datepicker.scss';
+
+/* Design Token */
+@layer base {
+  :root {
+    /* Text Color */
+    --color-text-primary: #0a0b0c;
+    --color-text-secondary: #757780;
+    // --color-text-brand: #2e3339;
+    --color-text-brand: #{$color-text-brand};
+    --color-text-invert: #fff1f3;
+    --color-text-alert: #e11d48;
+    --color-text-placeholder: #757780;
+
+    /* Surface / Background */
+    --color-surface-primary: #ffffff;
+    --color-surface-primary-accent: #f4f4f5;
+    --color-surface-secondary: #f4f4f5;
+    --color-surface-foreground: #0a0b0c;
+    --color-surface-invert: #ffffff;
+    --color-surface-brand-primary: #2d9d51;
+    --color-surface-brand-primary-hover: #2d9d51;
+    --color-surface-secondary: #f4f4f5;
+    --color-surface-secondary-hover: #18191b;
+    --color-surface-input: #e5e7eb;
+    --color-surface-container: #ffffff;
+    --color-surface-backdrop: #0000008c;
+
+    /* Border */
+    --color-border-primary: #e5e7eb;
+    --color-border-secondary: #f4f4f5;
+    --color-border-brand: #{$color-text-brand};
+    --color-border-disabled: #757780;
+
+    /* background */
+    --color-background: #ffffff;
+  }
+
+  .dark {
+    /* Text Color */
+    --color-text-primary: #f2f2f2;
+    --color-text-secondary: #a5a6ab;
+    --color-text-brand: #071c0f;
+    --color-text-invert: #0c0a09;
+    --color-text-alert: #821e1e;
+    --color-text-placeholder: #a5a6ab;
+
+    /* Surface / Background */
+    --color-surface-primary: #0c0a09;
+    --color-surface-primary-accent: #27272a;
+    --color-surface-secondary: #262626;
+    --color-surface-foreground: #f2f2f2;
+    --color-surface-invert: #1c1917;
+    --color-surface-brand-primary: #4cb67a;
+    --color-surface-brand-primary-hover: #255c3c;
+    --color-surface-secondary: #27272a;
+    --color-surface-secondary-hover: #fafafa;
+    --color-surface-input: #27272a;
+    --color-surface-container: #1c1917;
+    --color-surface-backdrop: #000000cc;
+
+    /* Border */
+    --color-border-primary: #27272a;
+    --color-border-secondary: #262626;
+    --color-border-brand: #{$color-text-brand};
+    --color-border-disabled: #a5a6ab;
+
+    /* background */
+    --color-background: #0c0a09;
+  }
+}
+
+@layer base {
+  :root {
+    --background: #f2f4f8;
+    --foreground: #171717;
+
+    /* Auth */
+    --color-auth-bg: #050a24;
+
+    /* Sidebar */
+    --sidebar-expand-width: 256px;
+    --sidebar-collapse-width: 80px;
+    --color-sidebar-bg: #ffffff;
+
+    /* Header */
+    --header-height: 64px;
+
+    /* Elements */
+    --color-dashboard-bg: var(--background);
+    --color-table-header: #e9f3ff;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    /* Sidebar */
+    --color-sidebar-bg: #1a1a1a;
+
+    /* Dashboard */
+    --color-dashboard-bg: var(--background);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-s-foreground;
+    color: var(--foreground);
+    font-family: var(--font-family-sans);
+  }
+}
+
+.bg-auth {
+  &::before {
+    @apply bg-[#2D55FB] h-40 w-40 rounded-full blur-[196px] absolute z-0;
+    left: 10%;
+    top: 22%;
+    content: '';
+  }
+
+  &::after {
+    @apply bg-[#2D55FB] h-40 w-40 rounded-full blur-[152px] absolute z-0;
+    right: 20%;
+    bottom: 22%;
+    content: '';
+  }
+}
+
+.sidebar {
+  @apply fixed top-0 left-0 h-full bg-s-primary shadow-lg z-50 transition-all duration-300 ease-in-out;
+  width: var(--sidebar-expand-width);
+
+  &.collapsed {
+    width: var(--sidebar-collapse-width);
+  }
+}
+
+.dashboard {
+  & > #content {
+    @apply transition-all duration-300 ease-in-out;
+    @apply flex flex-col relative mt-[var(--header-height)];
+
+    &:has(header) > main {
+      @apply p-4 md:p-8 md:pt-4;
+    }
+
+    header {
+      @apply fixed top-0 left-0 w-full z-40 h-[var(--header-height)] shrink-0 transition-all duration-300 ease-in-out;
+    }
+  }
+
+  &:has(.sidebar) {
+    & > #content {
+      @apply md:ml-[var(--sidebar-expand-width)];
+    }
+
+    header {
+      @apply md:pl-[calc(var(--sidebar-expand-width)_+_1rem)];
+    }
+  }
+
+  &:has(.sidebar.collapsed) {
+    & > #content {
+      @apply md:ml-[var(--sidebar-collapse-width)];
+    }
+
+    header {
+      @apply md:pl-[calc(var(--sidebar-collapse-width)_+_1rem)];
+    }
+  }
+}
+
+.advanced-cropper-boundary {
+  &__stretcher {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}

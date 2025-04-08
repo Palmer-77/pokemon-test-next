@@ -1,0 +1,194 @@
+{
+  "select_mode": {
+    "title": "เลือกโหมด",
+    "subtitle": "กรูณาเลือกโหมดที่ต้องการเล่น",
+    "content": {
+      "mode_1": {
+        "title": "Admin",
+        "description": "สำหรับ Admin เท่านั้น"
+      }
+    }
+  },
+  "buttons": {
+    "browse": "เรียกดู",
+    "cancel": "ยกเลิก",
+    "crop": "ครอป",
+    "discard_changes": "ละทิ้ง",
+    "not_now": "ไม่ใช่ตอนนี้",
+    "create": "สร้าง",
+    "submit": "ส่ง",
+    "previous": "ก่อนหน้า",
+    "next": "ต่อไป",
+    "save": "บันทึก",
+    "confirm": "ยืนยัน",
+    "edit": "แก้ไข",
+    "back": "กลับ",
+    "clear": "ล้าง"
+  },
+  "sidebar": {
+    "admin_dashboard": "หน้าแรก",
+    "admin_employee_management": "ผู้ใช้งาน",
+    "admin_report_management": "รายงาน",
+    "admin_role_management": "บทบาท",
+    "admin_time_management": "รอบ",
+    "admin_receipt_management": "ใบเสร็จ",
+    "admin_size_management": "ขนาด"
+  },
+  "common": {
+    "sort_oldest": "เก่าที่สุด",
+    "sort_latest": "ล่าสุด",
+    "show_number_of_entries": "แสดง <number></number> รายการ",
+    "empty_state_title": "ไม่พบรายการ",
+    "no_results_message": "ไม่พบผลการค้นหา",
+    "components": {
+      "date_picker": {
+        "start_label": "เริ่ม",
+        "end_label": "สิ้นสุด",
+        "range_label": "ตั้งแต่",
+        "select_date_placeholder": "เลือกเวลา",
+        "select_date_range_placeholder": "เลือกช่วงเวลา"
+      },
+      "datatable": {
+        "no_results": "ไม่พบผลการค้นหา",
+        "empty": "ไม่มีข้อมูล"
+      },
+      "display_user_type": {
+        "owner": "Owner",
+        "user": "User"
+      }
+    },
+    "dropdown": {
+      "all": "ทั้งหมด",
+      "view": "ดู",
+      "edit": "แก้ไข",
+      "delete": "ลบ",
+      "enable": "เปิดใช้งาน",
+      "disable": "ปิดใช้งาน"
+    },
+    "badge": {
+      "active": "กําลังใช้งาน",
+      "inactive": "ไม่ใช้งาน",
+      "pending": "รอดําเนินการ"
+    }
+  },
+  "admin": {
+    "user_management": {
+      "title": "จัดการผู้ใช้งาน",
+      "btn_create": "สร้างผู้ใช้งาน",
+      "table": {
+        "no": "ลําดับ",
+        "email": "อีเมล",
+        "name": "ชื่อ",
+        "role": "บทบาท",
+        "status": "สถานะ",
+        "actions": "การกระทํา",
+        "username": "ผู้ใช้"
+      },
+      "create": {
+        "title": "สร้างผู้ใช้งาน",
+        "btn_create": "สร้างผู้ใช้งาน"
+      },
+      "edit": {
+        "title": "แก้ไขผู้ใช้งาน",
+        "btn_edit": "แก้ไขผู้ใช้งาน"
+      },
+      "form": {
+        "user_information": {
+          "title": "ข้อมูลผู้ใช้งาน",
+          "username": {
+            "label": "ชื่อผู้ใช้งาน",
+            "placeholder": "กรุณากรอกชื่อผู้ใช้งาน",
+            "validation": {
+              "empty": "กรุณากรอกชื่อผู้ใช้งาน"
+            }
+          },
+          "password": {
+            "label": "รหัสผ่าน",
+            "placeholder": "กรุณากรอกรหัสผ่าน",
+            "validation": {
+              "empty": "กรุณากรอกรหัสผ่าน"
+            }
+          },
+          "firstname": {
+            "label": "ชื่อ",
+            "placeholder": "กรุณากรอกชื่อ",
+            "validation": {
+              "empty": "กรุณากรอกชื่อ"
+            }
+          },
+          "lastname": {
+            "label": "นามสกุล",
+            "placeholder": "กรุณากรอกนามสกุล",
+            "validation": {
+              "empty": "กรุณากรอกนามสกุล"
+            }
+          },
+          "status": {
+            "label": "สถานะ",
+            "options": {
+              "active": "เปิดใช้งาน",
+              "inactive": "ปิดใช้งาน"
+            }
+          }
+        },
+        "user_permissions": {
+          "title": "สิทธิ์การเข้าถึง",
+          "role": {
+            "label": "บทบาท",
+            "placeholder": "เลือกบทบาท",
+            "options": {
+              "admin": "Admin",
+              "user": "User"
+            }
+          }
+        },
+        "button": {
+          "cancel": "ยกเลิก",
+          "save": "สร้างผู้ใช้งาน"
+        }
+      }
+    },
+    "role_management": {
+      "title": "จัดการบทบาท",
+      "btn_create": "สร้างบทบาท",
+      "table": {
+        "no": "ลำดับ",
+        "name": "ชื่อสิทธิ",
+        "role": "จำนวนสิทธิ",
+        "status": "สถานะ",
+        "created_by": "สร้างโดย",
+        "created_at": "วันที่สร้าง",
+        "updated_at": "วันที่อัปเดท",
+        "updated_by": "อัปเดทโดย"
+      }
+    },
+    "size_management": {
+      "title": "จัดการขนาด",
+      "btn_create": "สร้างขนาด",
+      "table": {
+        "no": "ลำดับ",
+        "name": "ชื่อขนาด",
+        "status": "สถานะ",
+        "created_by": "สร้างโดย",
+        "created_at": "วันที่สร้าง",
+        "updated_at": "วันที่อัปเดท",
+        "updated_by": "อัปเดทโดย"
+      }
+    },
+    "cycle_management": {
+      "title": "จัดการรอบ",
+      "btn_create": "สร้างรอบ",
+      "table": {}
+    }
+  },
+  "modals": {
+    "confirm": {
+      "title": "test",
+      "description": "test"
+    },
+    "unsave_warning": {
+      "title": "test",
+      "description": "test"
+    }
+  }
+}
